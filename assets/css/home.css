@@ -1,0 +1,835 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: #f2f2f2;
+    padding-top: 10px;
+}
+
+/* Nav Bar */
+.header {
+    background-color: #e9f0ff;
+    position: sticky;
+    top: 5px;
+    height: 80px;
+    z-index: 2;
+    border-radius: 15px;
+    width: 90%;
+    transition: all 0.15s ease;
+    margin: auto;
+    padding: 5px 25px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-top: 5px;
+}
+
+.logo,
+.logo img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.nav-items {
+    padding-right: 50px;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-items a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #0000fe;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.nav-items a:hover {
+    text-decoration: underline;
+}
+
+.hamburger img {
+    display: none;
+}
+
+.main {
+    width: 100%;
+}
+
+/* Slide Container */
+.container-1 {
+    width: 100%;
+    height: 700px;
+    padding: 10px;
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.image-slider .slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-slider img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.slide-button {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    transform: translateY(-50%);
+    color: white;
+    background-color: rgba(71, 71, 71, 0.7);
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Logos Slider */
+.logos {
+    width: 100%;
+    padding: 50px 15px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.logos-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200%;
+    animation: scrollLogos 20s linear infinite;
+}
+
+.logos ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    animation: scrollLogos 20s linear infinite;
+}
+
+.logos ul li img {
+    width: 160px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+    height: 400px;
+    background-color: #fafafa;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.about .right {
+    height: 100%;
+    padding: 50px;
+}
+
+.right .h-2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.right .p-1 {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.courses {
+    height: 700px;
+    width: 98%;
+    border-radius: 15px;
+    margin: 0 20px;
+    background-color: #0000fe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.courses .head {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.box a {
+    color: #0000fe;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box:hover {
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+.box a:hover {
+    color: orange;
+}
+
+.courses .container {
+    width: 100%;
+    display: grid;
+    padding: 0 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-left: 250px;
+}
+
+
+
+.box .icon {
+    height: 70%;
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon img {
+    width: 180px;
+}
+
+.all {
+    width: 98%;
+    height: 600px;
+    display: flex;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.testimonials {
+    width: 50%;
+    padding: 50px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+
+}
+
+.testimonials .h2 {
+    text-align: center;
+}
+
+.testimonial-grid {
+    margin-top: 15px;
+    gap: 30px;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    font-palette: 20px;
+}
+
+.testimonial-box {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.testimonial-box:hover {
+    transform: scale(1.05);
+}
+
+.testimonial-box p {
+    color: #555;
+}
+
+.testimonial-box h3 {
+    color: #333;
+    font-weight: bold;
+}
+
+.left {
+    width: 50%;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.left .form {
+    height: 90%;
+    background-color: rgb(255, 183, 51);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left .form h2 {
+    margin-bottom: 25px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form form input {
+    width: 303px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 25px;
+    border: none;
+    outline: none;
+    transition: all 0.15s ease-in;
+}
+
+form input:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+form textarea {
+    width: 303px;
+    height: 80px;
+    border: none;
+    border-radius: 5px;
+    margin: 8px;
+    padding: 10px;
+    outline: none;
+    transition: all 0.15s ease;
+}
+
+.btn-1 {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    background-color: #0e6aff;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: all 0.15s ease-in;
+}
+
+.btn-1:hover {
+    color: #0e6aff;
+    background-color: white;
+    border: 2px solid #0e6aff;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.4);
+}
+
+.footer {
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(0,0,93);
+    color: white;
+    border-radius: 25px;
+}
+
+.f1 {
+    display: flex;
+    width: 100%;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.a1, .a2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.a1 {
+    padding-top: 15px;
+}
+
+.a11 {
+    margin-top: 10px ;
+    margin-left: 15px;
+}
+
+.a2 {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.a21 , .a22 {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.a1 h2 {
+    height: 10px;
+}
+
+.a12 {
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.a21 {
+    width: 40%;
+}
+
+.address1 {
+    width: 50%;
+    padding: 10px;
+}
+
+.a2 ul {
+    list-style: none;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+.a2 ul li a{
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.s1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.a22 {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.s1 .a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sendbroacher {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+}
+
+.btn-2{
+    padding: 10px;
+    border-radius: 15px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    background-color: rgb(255, 183, 51);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-2 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.a3 {
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+    background-color: rgb(255, 183, 51);
+    right: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .address1 h2 {
+    margin-bottom: 25px;
+  }
+
+
+
+@media screen and (max-width: 480px) {
+    .nav-items {
+        display: none;
+    }
+
+    .logo {
+        padding-top: 10px;
+    }
+
+    .logo,
+    .logo img {
+        width: 125px;
+    }
+
+    .hamburger img {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.open .nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 70px;
+        right: 25px;
+        background-color: #e9f0ff;
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .nav-items a {
+        font-size: 20px;
+        color: #0000fe;
+    }
+
+    .container-1 {
+        height: 350px;
+    }
+
+    .slide-button {
+        width: 30px;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .image-slider img {
+        object-fit: cover;
+    }
+
+    .logos ul li img {
+        width: 80px;
+    }
+
+    .logo-slider {
+        width: 600%;
+    }
+
+    .logos {
+        padding: 20px 5px;
+    }
+
+    .about {
+        height: auto;
+    }
+
+    /* Adjust grid layout for small screens */
+    .courses {
+        height: 1680px;
+        width: 95%;
+    }
+
+    .courses .container {
+        grid-template-columns: 90%;
+        padding-left:  40px;
+        padding-right: 10px;
+
+    }
+
+    .box {
+        height: auto;
+        width: auto;
+    }
+
+    
+
+    .all {
+        flex-direction: column; /* Stack all sections vertically */
+        height: 1200px; /* Allow content to grow */
+    }
+
+    .testimonials, .left {
+        width: 100%; /* Full width for both sections */
+        padding: 20px;
+    }
+
+    .testimonial-box {
+        width: 100%; /* Full width for testimonial boxes */
+        margin: 0; /* Remove any margin */
+    }
+
+    .testimonial-box p {
+        font-size: 14px; /* Smaller text size for mobile */
+    }
+
+    .testimonial-box h3 {
+        font-size: 16px; /* Smaller font size for names */
+    }
+
+    .left .form {
+        padding: 20px;
+        /* height: 780px; */
+    }
+
+    .form form {
+        gap: 10px; /* Adjust gap for better mobile alignment */
+    }
+
+    .item {
+        width: 100%; /* Ensure form items take full width */
+        flex-direction: column; /* Stack label and input vertically */
+    }
+
+    .form form input, form textarea {
+        width: 100%; /* Full width for input and textarea */
+        max-width: 100%; /* Ensure full-width behavior */
+    }
+
+    .btn-1 {
+        width: 100%; /* Full-width button */
+    }
+
+    .footer {
+        padding: 10px;
+        border-radius: 10px;
+        height: 1250px;
+      }
+    
+      .f1 {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .line {
+        width: 100%;
+        margin: 15px 0;
+      }
+    
+      .a1, .a2 {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+        gap: 20px;
+      }
+    
+      .a11 {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+      }
+    
+      .a1 {
+        padding-top: 15px;
+      }
+    
+      .a2 {
+        padding-top: 15px;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .a21, .a22 {
+        padding-left: 10px;
+        width: 100%;
+      }
+    
+      .a1 h2, .a2 h1 {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    
+      .a12 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+      }
+    
+      .address1 {
+        width: 100%;
+        padding: 10px;
+      }
+    
+      .a2 ul {
+        list-style: none;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        align-items: center;
+      }
+    
+      .a2 ul li a {
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+      }
+    
+      .social {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+      }
+    
+      .a22 {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+    
+      .sendbroacher {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -25px;
+        right:-65px;
+        align-items: center;
+      }
+    
+      .btn-2 {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 12px;
+      }
+    
+      .a3 {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        background-color: rgb(255, 183, 51);
+        left: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+    
+      .address1 h2 {
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+    
+      .s1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    
+      .s1 .a {
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+      }
+
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-90%);
+    }
+}

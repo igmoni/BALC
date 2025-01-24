@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: #f2f2f2;
+    padding-top: 10px;
+}
+
+/* Nav Bar */
+.header {
+    background-color: #e9f0ff;
+    position: sticky;
+    top: 5px;
+    height: 80px;
+    z-index: 2;
+    border-radius: 15px;
+    width: 90%;
+    transition: all 0.15s ease;
+    margin: auto;
+    padding: 5px 25px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-top: 5px;
+}
+
+.logo,
+.logo img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.nav-items {
+    padding-right: 50px;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-items a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #0000fe;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.nav-items a:hover {
+    text-decoration: underline;
+}
+
+.hamburger img {
+    display: none;
+}
+
+.head {
+    width: 98%;
+    height: 300px;
+    margin: 10px;
+    padding: 0 20px;
+    border-radius: 25px;
+    background: url('../img/a1.png');
+    opacity: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.head .img {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.img p {
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 100px;
+    word-spacing: 15px;
+    font-weight: bold;
+}
+
+.container {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+    justify-content: space-between;
+}
+
+.place {
+    flex: 1 1 calc(33.33% - 20px);
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.place1 {
+    background-color: white;
+    width: 33%;
+    height: 100%;
+}
+
+.place h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.place p {
+    margin: 5px 0 ;
+    color: #333;
+}
+
+.place .map {
+    margin-top: 10px;
+    width: 100%;
+    height: 250px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+}
+
+.map-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info {
+    margin-bottom: 10px;
+}
+
+
+
+
+.footer {
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(0,0,93);
+    color: white;
+    border-radius: 25px;
+}
+
+.f1 {
+    display: flex;
+    width: 100%;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.a1, .a2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.a1 {
+    padding-top: 15px;
+}
+
+.a11 {
+    margin-top: 10px ;
+    margin-left: 15px;
+}
+
+.a2 {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.a21 , .a22 {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.a1 h2 {
+    height: 10px;
+}
+
+.a12 {
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.a21 {
+    width: 40%;
+}
+
+.address1 {
+    width: 50%;
+    padding: 10px;
+}
+
+.a2 ul {
+    list-style: none;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+.a2 ul li a{
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.s1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.a22 {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.s1 .a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sendbroacher {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+}
+
+.btn-2{
+    padding: 10px;
+    border-radius: 15px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    background-color: rgb(255, 183, 51);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-2 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.a3 {
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+    background-color: rgb(255, 183, 51);
+    right: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .address1 h2 {
+    margin-bottom: 25px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .img p {
+        font-size: 50px;
+        padding-top: 60px;
+    }
+
+    .container {
+        padding: 30px;
+        gap: 15px;
+    }
+
+    .place {
+        flex: 1 1 45%; /* Makes two columns */
+        padding: 10px;
+    }
+
+    .place .map iframe {
+        height: 180px;
+    }
+}
+
+  @media screen and (max-width: 480px) {
+    .nav-items {
+        display: none;
+    }
+
+    .logo {
+        padding-top: 10px;
+    }
+
+    .logo,
+    .logo img {
+        width: 125px;
+    }
+
+    .hamburger img {
+        width: 30px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.open .nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 70px;
+        right: 25px;
+        background-color: #e9f0ff;
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .nav-items a {
+        font-size: 20px;
+        color: #0000fe;
+    }
+
+    .img p {
+        font-size: 30px;
+        padding-top: 50px;
+    }
+
+    
+    .container {
+        padding: 10px;
+       width: auto;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .place {
+        flex: 1 1 100%; /* Stacks the places vertically */
+        padding: 10px;
+    }
+
+    .place h2 {
+        font-size: 1rem;
+    }
+
+    .place p {
+        font-size: 0.9rem;
+    }
+
+    .place .map iframe {
+        height: 180px;
+    }
+
+    .map-info {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        margin-top: 55px;
+        padding: 10px;
+        border-radius: 10px;
+        height: 1350px;
+      }
+    
+      .f1 {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .line {
+        width: 100%;
+        margin: 15px 0;
+      }
+    
+      .a1, .a2 {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+        gap: 20px;
+      }
+    
+      .a11 {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+      }
+    
+      .a1 {
+        padding-top: 15px;
+      }
+    
+      .a2 {
+        padding-top: 15px;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .a21, .a22 {
+        padding-left: 10px;
+        width: 100%;
+      }
+    
+      .a1 h2, .a2 h1 {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    
+      .a12 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+      }
+    
+      .address1 {
+        width: 100%;
+        padding: 10px;
+      }
+    
+      .a2 ul {
+        list-style: none;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        align-items: center;
+      }
+    
+      .a2 ul li a {
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+      }
+    
+      .social {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+      }
+    
+      .a22 {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+    
+      .sendbroacher {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        align-items: center;
+      }
+    
+      .btn-2 {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 12px;
+      }
+    
+      .a3 {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        background-color: rgb(255, 183, 51);
+        left: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+    
+      .address1 h2 {
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+    
+      .s1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    
+      .s1 .a {
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+      }
+  }
